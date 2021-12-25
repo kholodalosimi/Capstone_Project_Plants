@@ -2,9 +2,11 @@ import React, { useState } from "react";
  import axios from "axios"
 
 
+
 export default function Joinus() {
    
 
+  
   let [id, setId] = useState("")
   let [name, setName] = useState("")
   let [phone, setPhone] = useState("")
@@ -14,6 +16,7 @@ export default function Joinus() {
   let [username ,setUsername] = useState("")
   let [password, setPassword] = useState("")
   let [Submit , setSubmit] = useState("")
+  // let [Confirm, setConfirm] = useState(false)
 
  
   function handleId(event) {setId((id = event.target.value));}
@@ -50,11 +53,13 @@ function handleSubmit(){
 
   
   return (
-   
+   <div style={{display:"inherit",background: '6d93a1', color: 'black' ,}}>
+
+{/* <button type ="submit" onClick={()=>setConfirm (!Confirm)}>Add To  </button>
+
+{Confirm && */}
      <form >
       
-      <div style={{display:"inherit",background: '6d93a1', color: 'black' ,}}>
-
         <hr /> 
           <label>  id </label>
           <input type="text" name="firsid" placeholder="" onChange={handleId} /><br/> <hr />
@@ -84,10 +89,10 @@ function handleSubmit(){
 
           <button onClick={handleSubmit} > submit  </button> 
 
-        </div>
+       
     
       </form>
-   
+    </div>
 
   );
 

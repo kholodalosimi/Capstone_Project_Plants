@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link, Outlet } from "react-router-dom";
+import './App.css';
 
 
 
@@ -18,11 +19,11 @@ export default function App() {
         
  style={{}} >
           <Link to="/home"><button> home </button>  </Link> 
-          <Link to="/joinus"><button> JoinUs </button>    </Link> 
-          <Link to="/plantfriends"><button> Plant Friends </button>    </Link> 
-          <Link to="/Login"><button> Login</button>   </Link> 
-          <Link to="/PlantsInSaudiArabia"><button> Plants In Saudi Arabia </button>   </Link> 
-          <Link to="/TheStrangestPlantsInTheWorld"><button> The Strangest Plants In The World</button>   </Link> 
+          <Link to="/joinus"><button> JoinUs </button>  </Link> 
+          <Link to="/plantfriends"><button> Plant Friends </button> </Link> 
+          <Link to="/Login"><button> Login</button>  </Link> 
+          <Link to="/PlantsInSaudiArabia"><button> Plants In Saudi Arabia </button> </Link> 
+          <Link to="/TheStrangestPlantsInTheWorld"><button> The Strangest Plants In The World</button>  </Link> 
       </nav>
       <Outlet />
       

@@ -1,4 +1,19 @@
-.App {
+ 
+ /* temporary */
+ 
+ body {
+  background-color: #accab0;
+  background:#e1efbb url('https://www.teahub.io/photos/full/35-352663_wallpaper-leaves-green-plant-aesthetic-nature-background-green.jpg');
+  color: rgb(255, 255, 255);
+  padding: 40px;
+  font-family: Arial;
+  text-align: center;
+} 
+ 
+
+
+
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +50,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
