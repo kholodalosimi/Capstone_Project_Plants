@@ -5,7 +5,7 @@ import javax.persistence.*;
 @Entity
 @Table
 public class Users {
-@Id
+    @Id
     private int id;
     private String name;
     private int phone;

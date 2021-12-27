@@ -18,10 +18,30 @@ public class Trees {
     private String location;
     private String plantingtime;
 
-
+//   2>>>>1
     @OneToMany(mappedBy = "trees")
     @JsonIgnore
     private List<Users> items = new ArrayList<>();
+
+
+
+
+//    2>>>>3
+//
+//    @OneToMany(mappedBy = "trees")
+//    @JsonIgnore
+//    private List<Treetype> treetype = new ArrayList<>();
+
+
+////    @ManyToOne(fetch = FetchType.LAZY)
+////    @JoinColumn(name = "treetypeId")
+////    private Treetype treetype;
+
+
+
+
+
+
 
     public Trees() {
     }
@@ -65,13 +85,4 @@ public class Trees {
         this.items = items;
     }
 
-    @Override
-    public String toString() {
-        return "Trees{" +
-                "treesId=" + treesId +
-                ", location='" + location + '\'' +
-                ", plantingtime='" + plantingtime + '\'' +
-                ", items=" + items +
-                '}';
-    }
 }

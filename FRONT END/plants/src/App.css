@@ -13,6 +13,38 @@
 
 
 
+.Home {
+  display: flex;
+  padding-left: 0;
+  align-items: stretch;
+  flex-grow: 1;
+  background-color:#71a489e3
+}
+
+.Home-nav {
+  border-right: thick double #223117;
+  flex-basis: 20rem;
+  /* background-color: #20a45ee3 ; */
+  z-index: 1;
+}
+
+/* .Home-nav {
+  border-right:
+} */
+
+.Home-heading {
+  border-right-style :dotted
+}
+
+
+
+
+/* .Home-repoContainer {
+  background-color: #20a45ee3
+} */
+
+
+
 /* .App {
   text-align: center;
 }

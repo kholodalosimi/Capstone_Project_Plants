@@ -20,8 +20,13 @@ public class Treetype {
 
 
 
+    //    3>>>>2
+//    @OneToMany(fetch = FetchType.LAZY, mappedBy="treetype")
+//    private List<Trees> treess = new ArrayList<Trees>();
 
-    public Treetype(int treetypeId, String named, String type) {
+
+
+    public Treetype (int treetypeId, String named, String type) {
         this.treetypeId = treetypeId;
         this.named = named;
         this.type = type;
@@ -33,7 +38,6 @@ public class Treetype {
     public int getTreetypeId() {
         return treetypeId;
     }
-
 
 
     public void setTreetypeId(int treetypeId) {
@@ -56,5 +60,3 @@ public class Treetype {
         this.type = type;
     }
 }
-
-
