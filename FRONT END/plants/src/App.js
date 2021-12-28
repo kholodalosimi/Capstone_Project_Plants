@@ -13,19 +13,29 @@ export default function App() {
 
   
   return (
-    <div>
+    <div >
            <h1 style={{fontFamily:"unset" ,fontSize:"40px",textAlign:"center" , backgroundColor: "6d93a1" }}> plants 🌱 </h1> 
       <h1 > </h1>
-      <nav
+      <nav 
+     
 
         
  style={{}} >
-          <Link to="/home"><button> home </button>  </Link> 
-          <Link to="/joinus"><button> JoinUs </button>  </Link> 
-          <Link to="/plantfriends"><button> Plant Friends </button> </Link> 
-          {/* <Link to="/Login"><button> Login</button>  </Link>  */}
-          {/* <Link to="/PlantsInSaudiArabia"><button> Plants In Saudi Arabia </button> </Link> 
-          <Link to="/TheStrangestPlantsInTheWorld"><button> The Strangest Plants In The World</button>  </Link>  */}
+          <Link to="/home"><button class="bubbly"> home </button>  </Link> 
+          <Link to="/joinus"><button class="bubbly"> JoinUs </button>  </Link> 
+          <Link to="/plantfriends"><button class="bubbly"> Plant Friends </button> </Link> 
+
+
+          <Link  className="Home" to="/TreesKsa"><button class="bubbly" > trees in saudi arabia</button>  </Link> 
+          <Link className="Home"  to="/TheFlowers"><button class="bubbly"> The Flowers</button> </Link> 
+          <Link className="Home" to="/world"><button class="bubbly"> The strangest trees in the world</button>  </Link> 
+
+
+{/* <h2><Link to="TreesKsa">trees in saudi arabia</Link></h2>
+                <h2><Link to="TheFlowers">The Flowers</Link></h2>
+                <h2><Link to="world">The strangest trees in the world</Link></h2> */}
+              
+              
       </nav>
       <Outlet />
 

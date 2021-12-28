@@ -7,15 +7,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from  "./plants/Home";
 import JoinUs from "./plants/JoinUs";
 import PlantFriends from "./plants/PlantFriends";
-import Login from "./plants/Login";
+// import Login from "./plants/Login";
 import TreesKsa from "./plants/TreesKsa";
-
-
-
-
-// import PlantsInSaudiArabia from "./plants/PlantsInSaudiArabia";
-// import TheStrangestPlantsInTheWorld from "./plants/TheStrangestPlantsInTheWorld";
-
+import TheFlowers from "./plants/TheFlowers";
+import World from "./plants/world";
 
 
 
@@ -23,12 +18,12 @@ import TreesKsa from "./plants/TreesKsa";
 
 
 ReactDOM.render(
+
 <BrowserRouter>
      <Routes>
        <Route path="/" element={<App />}>
          <Route path="home" element={<Home />}>
            <Route path="" element={<Home />} />
-
           </Route>
 
 
@@ -44,19 +39,19 @@ ReactDOM.render(
           </Route> */}
 
 
-          <Route path="home/treesksa" element={<TreesKsa />} >
-          <Route path="NationalId" element={<TreesKsa />} />
-          </Route>
-{/* 
-
-          <Route path="PlantsInSaudiArabia" element={<PlantsInSaudiArabia />} >
-          <Route path=":NationalId" element={<PlantsInSaudiArabia />} />
+          <Route path="TreesKsa" element={<TreesKsa />} >
+          {/* <Route path="NationalId" element={<TreesKsa />} /> */}
           </Route>
 
-          <Route path="TheStrangestPlantsInTheWorld" element={<TheStrangestPlantsInTheWorld />} >
-          <Route path=":NationalId" element={<TheStrangestPlantsInTheWorld />} />
 
-           </Route> */}
+          <Route path="TheFlowers" element={<TheFlowers />} >
+          {/* <Route path=":NationalId" element={< TheFlowers />} /> */}
+          </Route>
+
+          <Route path="world" element={<World />} >
+          {/* <Route path=":NationalId" element={<World />} /> */}
+          </Route>
+          
          
        </Route>
      </Routes>

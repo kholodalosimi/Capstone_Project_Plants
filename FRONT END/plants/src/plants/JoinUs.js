@@ -1,10 +1,11 @@
 import React, { useState } from "react";
- import axios from "axios"
+import axios from "axios"
 
 
 
 export default function Joinus() {
    
+
 
   
 //Table 1
@@ -17,7 +18,7 @@ export default function Joinus() {
   let [username ,setUsername] = useState("")
   let [password, setPassword] = useState("")
   let [submit , setSubmit] = useState("")
-
+  let[del,setdel]= useState("")// del
 
   // treesId
   let [treesId , setTreesId] = useState("")
@@ -25,7 +26,6 @@ export default function Joinus() {
 
 
 
-  // let [Confirm, setConfirm] = useState(false)
 
 
 
@@ -33,7 +33,6 @@ export default function Joinus() {
 
 // Table 2
   let [displayBorder, setDisplayBorder] = useState(false)
-  // let [treesId, setTreesId] = useState("")
   let [location, setLocation] = useState("")
   let [plantingtime, setPlantingtime] = useState("")
  
@@ -50,7 +49,7 @@ export default function Joinus() {
   function handlePicture(event) {setPicture((picture = event.target.value));}
   function handleUserame(event) {setUsername((username = event.target.value));}
   function handlePassword(event) {setPassword((password = event.target.value));}
-
+  function handleClickDel(event) {setdel((del= event.target.value))}//del TADAY n
 
 
   // treesId
@@ -60,17 +59,21 @@ export default function Joinus() {
 
 
   // Table 2
-  // function handleTreesId(event) {setTreesId((treesId = event.target.value));}
   function handleLocation(event) {setLocation((location = event.target.value));}
   function handlePlantingtime(event) {setPlantingtime((plantingtime = event.target.value));}
 
 
+ // Table 2 
+ let NueTrees = 
+ {"treesId": treesId,
+  location : location,
+   plantingtime : plantingtime}
 
 
-  // Table 2  >> Table 1
-  let NueTrees = {"treesId": treesId,}
+   
+ 
 
-
+ // Table 1 
   let NueUsers = { 
     id: id,
     name:name,
@@ -85,13 +88,12 @@ export default function Joinus() {
 }
 
 
+
+
+
 //  Table 1 add
 function handleSubmit(){
     
-
-  
-
-
     console.log("insid function");
         console.log(NueUsers)
         axios({
@@ -101,112 +103,121 @@ function handleSubmit(){
         });
     
       }
+
+
+
+
 // table 1 Del
-    function handleClickDel(){
-
+    function handleClickDel2(){
+ 
       axios({
-        method: 'delete' ,
-        url: "api/users/delete/10",
+        method:'delete',
+        url:`/api/users/delete/${del}`,
 
-      });
-    }
-
+      });}
 
 
 
-    // Table 2 add
-    
+
+    // Table 2 add 
 function handleSubmit1(){
     }
-
-
-
   console.log("insid function");
       console.log(NueTrees)
       axios({
           method: 'post',
           url: 'api/trees/add',
           data: NueTrees,
+          
       });
   
 
 
+
 // table 2 Del
-    function handleClickDel1(){
 
+    // function handleClickDel1(){
+    //   axios({
+    //     method: 'delete' ,
+    //     url: "api/trees/delete/",
 
-      axios({
-        method: 'delete' ,
-        url: "api/trees/delete/",
+    //   });
+    // }
 
-      });
-    }
 
 
 
 
 
   return (
-    <main style={{ }}>
+    <main class="input1" >
      
-    <div>
+    <div >
 
     {/* Table 1 */}
-          <label>  id </label>
-          <input type="text" name="firsid" placeholder="" onChange={handleId} /><br/> <hr />
+          <label>  id:  </label>
+          <input c   type="text" name="firsid" placeholder="" onChange={handleId} /><br/>
 
-          <hr /> 
-          <label> NAME </label>
-          <input type="text" name="name" placeholder="" onChange={handleName} /><br/> <hr />
+           
+          <label> NAME : </label>
+          <input type="text" name="name" placeholder="" onChange={handleName} /><br/> 
 
-          <label> phone </label> 
-          <input type="text" name="phone" placeholder="" onChange={handlePhone} /><br/><hr />
+          <label> phone : </label> 
+          <input type="text" name="phone" placeholder="" onChange={handlePhone} /><br/>
 
-          <label> email </label> 
-          <input type="text" name="email"placeholder="" onChange={handleEmail} size="10" /><br/> <hr />
+          <label> email : </label> 
+          <input type="text" name="email"placeholder="" onChange={handleEmail} size="10" /><br/>
 
-          <label> number Of Plants </label> 
-          <input type="text" name="numberOfPlants"placeholder="" onChange={handleNumberOfPlants} size="10" /><br/> <hr />
+          <label> number Of Plants : </label> 
+          <input name="numberOfPlants"placeholder="" onChange={handleNumberOfPlants} size="10" /><br/> 
 
-          <label> picture </label> 
-          <input type="text" name="picture"placeholder="" onChange={handlePicture} size="10" /><br/> <hr />
+          <label> picture : </label> 
+          <input  name="picture"placeholder="" onChange={handlePicture} size="10" /><br/> 
 
-          <label> usename </label> 
-          <input type="text" name="username"placeholder="" onChange={handleUserame} size="10" /><br/> <hr />
+          <label> usename : </label> 
+          <input type="text" name="username"placeholder="" onChange={handleUserame} size="10" /><br/>
 
-          <label> password </label> 
-          <input type="text" name="password"placeholder="" onChange={handlePassword} size="10" /><br/> <hr />
+          <label> password :  </label> 
+          <input type="password" name="password"placeholder="" onChange={handlePassword} size="10" /><br/> <hr />
 
           <label>  treesId:  </label>
           <input type="text" name="firsid" placeholder="" onChange={handleTreesId} /><br/> <hr />
 
+          <input type="text" id="id" name="id" onChange={handleClickDel} /><br />
 
-          <button type ="submit" onClick={()=>setDisplayBorder(!displayBorder)} >the details { displayBorder } </button>
-          <button onClick={handleSubmit} > submit  </button> 
-          <button onClick={handleClickDel} > delete  </button> 
+
+
+         <input type="submit" value="Delete" onClick={handleClickDel2}></input> <br />
+
+          <button onClick={handleSubmit} > submit  </button> <br/> <hr />
+          <button type ="submit" onClick={()=>setDisplayBorder(!displayBorder)} >Location and time{ displayBorder } </button> <br/> <hr />
+
+
+
+
 
 
 
 
  
+
+
 
           {/* Table 2 */}
         {displayBorder &&
 
         <div >
-        {/* <label>  treesId:  </label>
-          <input type="text" name="firsid" placeholder="" onChange={handleTreesId} /><br/> <hr /> */}
+
 
           <label> Location </label>
-          <input type="text" name="name" placeholder="" onChange={handleLocation} /><br/> <hr />
+          <input type="text" name="name" placeholder="" onChange={handleLocation} /><br/> 
 
           <label> Planting Time  </label> 
-          <input type="text" name="phone" placeholder="" onChange={handlePlantingtime} /><br/><hr />
+          <input type="text" name="phone" placeholder="" onChange={handlePlantingtime} /><br/>
  
-          <button onClick={handleSubmit1} > submit  </button> 
-           <button onClick={handleClickDel1} > delete  </button> 
+          <button onClick={handleSubmit1} > submit  </button> <br/> <hr />
 
-         
+        
 
           </div>}
       </div>

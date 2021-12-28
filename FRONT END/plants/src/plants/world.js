@@ -1,14 +1,17 @@
+import React from 'react'
 
 
 
-export default function TreesKsa() {
+
+
+export default function World() {
     return (
-        <div className="Home">
+        <div className="Home" >
             
-            <h1 style={{}}>
+            <h1 >
                 
                 
-                trees in saudi arabia
+            world 
                 
                 
                 </h1>
