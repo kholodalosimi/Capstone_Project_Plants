@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link, Outlet } from "react-router-dom";
 import './App.css';
+import Logo from "./plants/image/Logo.png";
 
 
 
@@ -14,30 +15,22 @@ export default function App() {
   
   return (
     <div >
-           <h1 style={{fontFamily:"unset" ,fontSize:"40px",textAlign:"center" , backgroundColor: "6d93a1" }}> plants 🌱 </h1> 
-      <h1 > </h1>
-      <nav 
-     
-
-        
- style={{}} >
-          <Link to="/home"><button class="bubbly"> home </button>  </Link> 
+       <img src={Logo} alt="logo" className="logo" />
+      <nav >
+             <Link to="/home">< button class="bubbly"> Home </button>  </Link> 
           <Link to="/joinus"><button class="bubbly"> JoinUs </button>  </Link> 
           <Link to="/plantfriends"><button class="bubbly"> Plant Friends </button> </Link> 
+          <Link to="/UserProfile"><button class="bubbly"> User Profile </button> </Link>
 
 
-          <Link  className="Home" to="/TreesKsa"><button class="bubbly" > trees in saudi arabia</button>  </Link> 
-          <Link className="Home"  to="/TheFlowers"><button class="bubbly"> The Flowers</button> </Link> 
-          <Link className="Home" to="/world"><button class="bubbly"> The strangest trees in the world</button>  </Link> 
-
-
-{/* <h2><Link to="TreesKsa">trees in saudi arabia</Link></h2>
-                <h2><Link to="TheFlowers">The Flowers</Link></h2>
-                <h2><Link to="world">The strangest trees in the world</Link></h2> */}
-              
+          <Link  className="Home" to="/TreesKsa"><button class="bubbly1" > trees in saudi arabia</button>  </Link> 
+          <Link className="Home"  to="/TheFlowers"><button class="bubbly1"> The Flowers</button> </Link> 
+          <Link className="Home" to="/world"><button class="bubbly1"> The strangest trees in the world</button>  </Link>      
               
       </nav>
       <Outlet />
+
+      
 
     <div>  
 <h3>(Afforestation in Saudi Arabia)</h3>

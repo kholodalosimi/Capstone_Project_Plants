@@ -1,6 +1,13 @@
 package com.example.plantms.model.Entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
+
+
+
 
 @Entity
 @Table
@@ -10,32 +17,43 @@ public class Users {
     private String name;
     private int phone;
     private String email;
-    private int numberOfPlants;
     private String picture;
     private String username;
     private int password;
 
-    @ManyToOne
-    @JoinColumn(name = "trees_id",referencedColumnName = "treesId")
-    private Trees trees;
 
 
 
 
-    public Users( int id, String name, int phone, String email, int numberOfPlants, String picture, String username, int password, Trees trees  ) {
+
+//     1>>>>2
+    @OneToMany ( mappedBy = "users")
+    @JsonIgnore
+    private List<Trees> items = new ArrayList<>();
+
+
+
+
+
+
+
+
+    public Users( int id, String name, int phone, String email, String picture, String username ) {
         this.id = id;
         this.name = name;
         this.phone = phone;
         this.email = email;
-        this.numberOfPlants = numberOfPlants;
         this.picture = picture;
         this.username = username;
-        this.password = password;
-        this.trees = trees;
+
     }
+
+
+
 
     public Users() {
     }
+
 
 
     public int getId() {
@@ -70,14 +88,6 @@ public class Users {
         this.email = email;
     }
 
-    public int getNumberOfPlants() {
-        return numberOfPlants;
-    }
-
-    public void setNumberOfPlants(int numberOfPlants) {
-        this.numberOfPlants = numberOfPlants;
-    }
-
     public String getPicture() {
         return picture;
     }
@@ -102,13 +112,14 @@ public class Users {
         this.password = password;
     }
 
-
-
-    public Trees getTrees() {
-        return trees;
+    public List<Trees> getItems() {
+        return items;
     }
 
-    public void setTrees(Trees trees) {
-        this.trees = trees;
+    public void setItems(List<Trees> items) {
+        this.items = items;
     }
+
+
+
 }

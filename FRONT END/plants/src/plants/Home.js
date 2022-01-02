@@ -5,7 +5,7 @@ export default function Home (props){
 
 <div>
     
-
+Soon ^_^
 
 
    </div>

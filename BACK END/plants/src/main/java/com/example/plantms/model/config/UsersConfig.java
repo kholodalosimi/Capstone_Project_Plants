@@ -12,14 +12,14 @@ import java.util.List;
 @Configuration
 public class UsersConfig {
 
-    @Bean
-    CommandLineRunner commandLineRunner1 (UsersRepository repository){
-        return args -> {
-
-
-
-//            repository.saveAll(List.of());
-
-        };
-    }
+//    @Bean
+//    CommandLineRunner commandLineRunner1 (UsersRepository repository){
+//        return args -> {
+//
+//
+//
+////            repository.saveAll(List.of());
+//
+//        };
+//    }
 }

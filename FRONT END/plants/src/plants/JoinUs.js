@@ -7,23 +7,23 @@ export default function Joinus() {
    
 
 
+
+
+
   
+
 //Table 1
   let [id, setId] = useState("")
   let [name, setName] = useState("")
   let [phone, setPhone] = useState("")
   let [email, setEmail] = useState("")
-  let [numberOfPlants, setNumberOfPlants] = useState("")
   let [picture, setPicture] = useState("")
   let [username ,setUsername] = useState("")
   let [password, setPassword] = useState("")
   let [submit , setSubmit] = useState("")
-  let[del,setdel]= useState("")// del
-
+  // let[del,setdel]= useState("")// del
   // treesId
-  let [treesId , setTreesId] = useState("")
-
-
+  // let [treesId , setTreesId] = useState("")
 
 
 
@@ -32,10 +32,21 @@ export default function Joinus() {
 
 
 // Table 2
-  let [displayBorder, setDisplayBorder] = useState(false)
-  let [location, setLocation] = useState("")
-  let [plantingtime, setPlantingtime] = useState("")
+  // let [displayBorder, setDisplayBorder] = useState(false)
+  // let [location, setLocation] = useState("")
+  // let [plantingtime, setPlantingtime] = useState("")
  
+
+
+
+
+  
+  // Table 3
+  // let [treetypeId, setTreetypeId] = useState("")
+  // let [named, setNamed] = useState("")
+  // let [type, setType] = useState("")
+  // let [numberOfPlants, setNumberOfPlants] = useState("")
+  // let [image, setImage] = useState("")
 
 
 
@@ -45,33 +56,35 @@ export default function Joinus() {
   function handleName(event) {setName((name = event.target.value));}
   function handlePhone(event) {setPhone((phone = event.target.value));}
   function handleEmail(event) {setEmail((email = event.target.value));}
-  function handleNumberOfPlants(event) {setNumberOfPlants((numberOfPlants = event.target.value));}
   function handlePicture(event) {setPicture((picture = event.target.value));}
   function handleUserame(event) {setUsername((username = event.target.value));}
   function handlePassword(event) {setPassword((password = event.target.value));}
-  function handleClickDel(event) {setdel((del= event.target.value))}//del TADAY n
+  // function handleClickDel(event) {setdel((del= event.target.value))}//del 
 
-
+  
   // treesId
-  function handleTreesId(event) {setTreesId((treesId = event.target.value));}
+  // function handleTreesId(event) {setTreesId((treesId = event.target.value));}
+
 
 
 
 
   // Table 2
-  function handleLocation(event) {setLocation((location = event.target.value));}
-  function handlePlantingtime(event) {setPlantingtime((plantingtime = event.target.value));}
+  // function handleLocation(event) {setLocation((location = event.target.value));}
+  // function handlePlantingtime(event) {setPlantingtime((plantingtime = event.target.value));}
 
 
- // Table 2 
- let NueTrees = 
- {"treesId": treesId,
-  location : location,
-   plantingtime : plantingtime}
 
 
-   
- 
+    // Table 3
+  // function handleTreetypeId(event) {setTreetypeId((treetypeId = event.target.value));}
+  // function handleNamed(event) {setNamed((named = event.target.value));}
+  // function handleType(event) {setType((type = event.target.value));}
+  // function handleNumberOfPlants(event) {setNumberOfPlants((numberOfPlants = event.target.value));}
+  // function handleImage(event) {setImage((image = event.target.value));}
+
+
+
 
  // Table 1 
   let NueUsers = { 
@@ -79,13 +92,37 @@ export default function Joinus() {
     name:name,
     phone:phone,
     email:email,
-    numberOfPlants:numberOfPlants,
     picture:picture,
     username:username,
     password:password,
-    trees: NueTrees
+    
+  }
 
-}
+
+       // Table 3
+
+
+// let  NueTreetype = {
+//   treetypeId : treetypeId,
+//   named : named,
+//   type : type,
+//    numberOfPlants:numberOfPlants,
+//   image : image
+// }
+ 
+
+
+ // Table 2 
+
+//  let NueTrees = 
+//  {treesId: treesId,
+//   location : location,
+//    plantingtime : plantingtime,
+//    users : NueUsers,
+//    Treetype : NueTreetype
+  
+//   }
+
 
 
 
@@ -108,28 +145,30 @@ function handleSubmit(){
 
 
 // table 1 Del
-    function handleClickDel2(){
+    // function handleClickDel2(){
  
-      axios({
-        method:'delete',
-        url:`/api/users/delete/${del}`,
+    //   axios({
+    //     method:'delete',
+    //     url:`/api/users/delete/${del}`,
 
-      });}
+    //   });}
 
 
 
 
     // Table 2 add 
-function handleSubmit1(){
-    }
-  console.log("insid function");
-      console.log(NueTrees)
-      axios({
-          method: 'post',
-          url: 'api/trees/add',
-          data: NueTrees,
+
+
+// function handleSubmit1(){
+//     }
+//   console.log("insid function");
+//       console.log(NueTrees)
+//       axios({
+//           method: 'post',
+//           url: 'api/trees/add',
+//           data: NueTrees,
           
-      });
+//       });
   
 
 
@@ -146,19 +185,52 @@ function handleSubmit1(){
 
 
 
+// table 3 add
+
+
+    // function handleSubmit3(){
+    
+    //   console.log("insid function");
+    //       console.log(NueTreetype)
+    //       axios({
+    //           method: 'post',
+    //           url: 'api/Treetype/add',
+    //           data: NueTreetype,
+    //       });
+      
+    //     }
+  
+  
+  
+  
+
+  // // table 3 Del
+
+
+  //     function handleClickDel2(){
+   
+  //       axios({
+  //         method:'delete',
+  //         url:`/api/Treetype/delete/${del}`,
+  
+  //       });}
+
 
 
 
   return (
-    <main class="input1" >
+    <main className="input1" >
+
      
-    <div >
+    <div>
+ 
 
     {/* Table 1 */}
-          <label>  id:  </label>
-          <input c   type="text" name="firsid" placeholder="" onChange={handleId} /><br/>
 
-           
+
+          <label>  id:  </label>
+          <input type="text" name="id" placeholder="" onChange={handleId} /><br/>
+
           <label> NAME : </label>
           <input type="text" name="name" placeholder="" onChange={handleName} /><br/> 
 
@@ -168,11 +240,8 @@ function handleSubmit1(){
           <label> email : </label> 
           <input type="text" name="email"placeholder="" onChange={handleEmail} size="10" /><br/>
 
-          <label> number Of Plants : </label> 
-          <input name="numberOfPlants"placeholder="" onChange={handleNumberOfPlants} size="10" /><br/> 
-
           <label> picture : </label> 
-          <input  name="picture"placeholder="" onChange={handlePicture} size="10" /><br/> 
+          <input  name="picture" placeholder="" onChange={handlePicture} size="10" /><br/> 
 
           <label> usename : </label> 
           <input type="text" name="username"placeholder="" onChange={handleUserame} size="10" /><br/>
@@ -180,17 +249,15 @@ function handleSubmit1(){
           <label> password :  </label> 
           <input type="password" name="password"placeholder="" onChange={handlePassword} size="10" /><br/> <hr />
 
-          <label>  treesId:  </label>
-          <input type="text" name="firsid" placeholder="" onChange={handleTreesId} /><br/> <hr />
 
-          <input type="text" id="id" name="id" onChange={handleClickDel} /><br />
+          {/* <label>  treesId:  </label>
+          <input type="text" name="firsid" placeholder="" onChange={handleTreesId} /><br/> <hr /> */}
 
+          {/* <input type="text" id="id" name="id" onChange={handleClickDel} /><br />
+         <input type="submit" value="Delete" onClick={handleClickDel2}></input> <br /> */}
 
-
-         <input type="submit" value="Delete" onClick={handleClickDel2}></input> <br />
-
-          <button onClick={handleSubmit} > submit  </button> <br/> <hr />
-          <button type ="submit" onClick={()=>setDisplayBorder(!displayBorder)} >Location and time{ displayBorder } </button> <br/> <hr />
+          <button onClick={handleSubmit} > submit1  </button> <br/> <hr />
+          {/* <button type ="submit" onClick={()=>setDisplayBorder(!displayBorder)} >2+3{ displayBorder } </button> <br/> <hr /> */}
 
 
 
@@ -203,25 +270,41 @@ function handleSubmit1(){
 
 
 
+
           {/* Table 2 */}
-        {displayBorder &&
+        {/* {displayBorder && */}
 
         <div >
-
-
-          <label> Location </label>
+          {/* <label> Location </label>
           <input type="text" name="name" placeholder="" onChange={handleLocation} /><br/> 
 
           <label> Planting Time  </label> 
           <input type="text" name="phone" placeholder="" onChange={handlePlantingtime} /><br/>
  
-          <button onClick={handleSubmit1} > submit  </button> <br/> <hr />
+          <button onClick={handleSubmit1} > submit2  </button> <br/> <hr /> */}
 
-        
 
-          </div>}
+
+        {/* 3 */}
+        {/* <label> treetypeId :  </label> 
+          <input type="text" name="treetypeId"placeholder="" onChange={handleTreetypeId} size="10" /><br/> <hr />
+
+          <label> named :  </label> 
+          <input type="text" name="named"placeholder="" onChange={handleNamed} size="10" /><br/> <hr />
+
+          <label> type :  </label> 
+          <input type="text" name="type"placeholder="" onChange={handleType} size="10" /><br/> <hr />
+
+                    <label> number Of Plants : </label> 
+          <input name="numberOfPlants"placeholder="" onChange={handleNumberOfPlants} size="10" /><br/> 
+
+         <label> image : </label> 
+         <input  name="picture" placeholder="" onChange={handleImage} size="10" /><br/> 
+
+         <button onClick={handleSubmit3} > submit3  </button> <br/> <hr /> */}
+
       </div>
-    
+   </div>
     </main>
 
    

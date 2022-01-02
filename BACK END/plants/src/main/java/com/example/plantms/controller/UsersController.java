@@ -1,5 +1,6 @@
 package com.example.plantms.controller;
 
+
 import com.example.plantms.model.Entities.Users;
 import com.example.plantms.model.Servicer.UsersService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,20 +25,27 @@ public class UsersController <usersService> {
         return usersService.getUsers();
     }
 
+
+
     @GetMapping
             (path = "{usersId}")
     public Optional<Users> getUsers(@PathVariable(name = "usersId") Integer usersId) {
         return usersService.getUsers(usersId);
     }
 
+
+
     @PostMapping(path = "add")
     public void registerNewUsers(@RequestBody Users users) {
         usersService.addNewUsers(users);
     }
 
-    @DeleteMapping(path = "delete/{usersId}")
-    public void deleteUser(@PathVariable ("usersId") Integer usersId){
-        usersService.deleteUsers(usersId);
+
+                @DeleteMapping(path = "delete/{usersId}")
+        public void deleteUsers(@PathVariable ("usersId") String usersId){
+            int ueInt =Integer.parseInt(usersId);
+                    usersService.deleteUsers(ueInt);
+
 
     }
 }

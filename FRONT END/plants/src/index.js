@@ -11,7 +11,9 @@ import PlantFriends from "./plants/PlantFriends";
 import TreesKsa from "./plants/TreesKsa";
 import TheFlowers from "./plants/TheFlowers";
 import World from "./plants/world";
-
+import UserProfile from "./plants/UserProfile";
+import AddPlant from "./plants/AddPlant";
+import MyGarden from "./plants/MyGarden";
 
 
 
@@ -33,23 +35,25 @@ ReactDOM.render(
           <Route path="plantfriends" element={<PlantFriends />} >
           <Route path=":NationalId" element={<PlantFriends />} />
           </Route>
-
-          {/* <Route path="Login" element={<Login />} >
-          <Route path=":NationalId" element={<Login />} />
-          </Route> */}
-
-
+         
+          <Route path="UserProfile" element={<UserProfile />} />
+      
           <Route path="TreesKsa" element={<TreesKsa />} >
-          {/* <Route path="NationalId" element={<TreesKsa />} /> */}
+ 
           </Route>
-
-
           <Route path="TheFlowers" element={<TheFlowers />} >
-          {/* <Route path=":NationalId" element={< TheFlowers />} /> */}
           </Route>
 
           <Route path="world" element={<World />} >
-          {/* <Route path=":NationalId" element={<World />} /> */}
+       
+          </Route>
+
+          <Route path="AddPlant" element={<AddPlant />} >
+     
+          </Route>
+
+          <Route path="MyGarden" element={<MyGarden />} >
+     
           </Route>
           
          

@@ -1,7 +1,6 @@
 
 import React, { Component } from "react";
 import axios, { Axios } from "axios"
-// import { Card } from "stream-chat-react";
 
 
 
@@ -13,32 +12,21 @@ export default class PlantFriends extends Component {
 
         this.state = {
 
-            useTrees: [],
+            useFriends: [],
 
         };
     }
 
 
 
+
     componentDidMount() {
-        axios.get("api/users").then(response => {
-            const useTrees = response.data
-            this.setState({ useTrees });
+        axios.get("api/trees").then(response => {
+            const useFriends = response.data
+            this.setState({ useFriends });
+
         });
     }
-
-
-
-
-    deleteUseTrees(id) {
-        console.log("Delete after Entering")
-        axios.delete(`api/users/delete/${id}`)
-            .then(res => {
-                const useTrees = this.state.useTrees.filter(item => item.id !== id);
-                this.setState({ useTrees });
-            })
-    }
-
 
 
 
@@ -51,38 +39,21 @@ export default class PlantFriends extends Component {
 
 
             <div className="Home" >
-                <table >
-                    <thead>
-                       
-                            <th className="Home2" >id </th> 
-                            <th >name </th>
-                            <th >phone </th>
-                            <th >email</th>
-                            <th >image</th>
-                            <th >number Of Plants</th>
-                            <th >username</th>
-                            <th >password</th>
-                        
-                    </thead>
-
-                    <tbody>
-                        {this.state.useTrees.map((item => (
-                            <tr key={item.id}>
-                                <td>{item.id}</td>
-                                <td>{item.name}</td>
-                                <td>{item.phone}</td>
-                                <td>{item.email}</td>
-                                <td>{item.numberOfPlants}</td>
-                                <td><img height="200" width="200" src={item.picture} /></td>
-                                <td>{item.username}</td>  
-                                <td>{item.password}</td>
-                                <td><button onClick={(e) => this.deleteUseTrees(item.id, e)}>delete</button></td>
+                <div className="Home2">
+                        {this.state.useFriends.map((item => (
+                            <tr key={item.treetypeId}>
+                                <td>{item.treetype}</td>
+                                <td>{item.named}</td>
+                                <td>{item.type}</td>
+                                <td><img height="200" width="200" src={item.image} /></td>
+                                <td>{item.numberOfPlants}</td>  
+                             
                             </tr>
                         )))
                         }
-                    </tbody>
-                </table>
             </div>
+            </div>
+           
       )
     }
   }

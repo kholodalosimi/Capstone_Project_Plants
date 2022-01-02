@@ -32,8 +32,7 @@ public class UsersService {
     }
     public void deleteUsers(Integer usersId) {
         usersRepository.deleteById(usersId);
-        //boolean exist = usersRepository.existsById(usersId);
-        // put a condition on 'exist'. if exist then delete
+
     }
 
 
