@@ -22,6 +22,9 @@ export default class PlantFriends extends Component {
 
 
 
+
+
+
     componentDidMount() {
         axios.get("api/trees").then(response => {
             const useFriends = response.data
@@ -82,12 +85,7 @@ export default class PlantFriends extends Component {
     }
     }
    
-                            //   
-                            //   
-                            //   
-                            //   
-                            //    
-                            //     
+  
                        
 
 
