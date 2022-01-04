@@ -9,9 +9,6 @@ export default function Joinus() {
 
 
 
-
-  
-
 //Table 1
   let [id, setId] = useState("")
   let [name, setName] = useState("")
@@ -24,7 +21,6 @@ export default function Joinus() {
   // let[del,setdel]= useState("")// del
   // treesId
   // let [treesId , setTreesId] = useState("")
-
 
 
 

@@ -18,6 +18,23 @@ public class UsersService {
     }
 
 
+//    login
+
+    public String getCheck(String username ,String password) {
+        if(usersRepository.existsByUsername (username)) {
+
+            String pass = usersRepository.findByUsername(username);
+            if (pass.equals(password)) {
+                return "welcome you Authentication";
+            } else {
+                return " wrong password";
+            }
+        }
+
+        return "sorry not  Authentication";
+    }
+
+
     public List<Users> getUsers() {
         return usersRepository.findAll();
     }

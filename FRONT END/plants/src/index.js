@@ -14,6 +14,7 @@ import World from "./plants/world";
 import UserProfile from "./plants/UserProfile";
 import AddPlant from "./plants/AddPlant";
 import MyGarden from "./plants/MyGarden";
+ import Login  from "./plants/Login";
 
 
 
@@ -27,6 +28,9 @@ ReactDOM.render(
          <Route path="home" element={<Home />}>
            <Route path="" element={<Home />} />
           </Route>
+
+          <Route path="Login" element={<Login />} />
+          <Route path=":NationalId" element={<Login />} />
 
 
           <Route path="joinus" element={<JoinUs />} />

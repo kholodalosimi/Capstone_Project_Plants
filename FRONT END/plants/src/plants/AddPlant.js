@@ -12,9 +12,6 @@ export default function AddPlant() {
 
 
 
-
-
-
 // Table 2
   let [location, setLocation] = useState("")
   let [plantingtime, setPlantingtime] = useState("")
@@ -67,7 +64,7 @@ let  NueTreetype = {
   treetypeId : treetypeId,
   named : named,
   type : type,
-   numberOfPlants:numberOfPlants,
+  //  numberOfPlants:numberOfPlants,
   image : image
 }
 
@@ -75,12 +72,13 @@ let  NueTreetype = {
 
  // Table 2 
 
+
  let NueTrees = 
  {treesId: treesId,
   location : location,
    plantingtime : plantingtime,
-   users : NueUsers,
-   Treetype : NueTreetype
+  //  users : NueUsers,
+   treetype : NueTreetype
   
   }
 
@@ -155,21 +153,9 @@ function handleSubmit1(){
     <div  >
 
         <div >
-               {/* 2 */}
-          <label> Location </label>
-          <input type="text" name="name" placeholder="" onChange={handleLocation} /><br/> 
+       
 
-          <label> Planting Time  </label> 
-          <input type="text" name="phone" placeholder="" onChange={handlePlantingtime} /><br/>
-          <label>  treesId:  </label>
-          <input type="text" name="firsid" placeholder="" onChange={handleTreesId} /><br/> 
-
-          
- 
-          <button onClick={handleSubmit1} > submit2  </button> <br/> 
-
-
-             {/* 3 */}
+        
         <label> treetypeId :  </label> 
           <input type="text" name="treetypeId"placeholder="" onChange={handleTreetypeId} size="10" /><br/> <hr />
 
@@ -187,6 +173,20 @@ function handleSubmit1(){
 
          <button onClick={handleSubmit3} > submit3  </button> <br/> <hr />
 
+<br></br>
+<br></br>
+        {/* 2 */}
+        <label> Location </label>
+          <input type="text" name="name" placeholder="" onChange={handleLocation} /><br/> 
+
+          <label> Planting Time  </label> 
+          <input type="text" name="phone" placeholder="" onChange={handlePlantingtime} /><br/>
+          <label>  treesId:  </label>
+          <input type="text" name="firsid" placeholder="" onChange={handleTreesId} /><br/> 
+
+          
+ 
+          <button onClick={handleSubmit1} > submit2  </button> <br/> 
 
           </div>
       </div>

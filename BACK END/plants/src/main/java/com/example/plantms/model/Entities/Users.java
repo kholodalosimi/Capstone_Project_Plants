@@ -35,9 +35,6 @@ public class Users {
 
 
 
-
-
-
     public Users( int id, String name, int phone, String email, String picture, String username ) {
         this.id = id;
         this.name = name;

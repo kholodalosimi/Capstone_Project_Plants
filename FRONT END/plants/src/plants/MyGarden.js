@@ -13,7 +13,7 @@ export default class MyGarden extends Component {
 
         this.state = {
 
-            useType: [],
+            useGarden: [],
 
         };
     }
@@ -21,60 +21,27 @@ export default class MyGarden extends Component {
 
 
 
+
+
     componentDidMount() {
         axios.get("api/trees").then(response => {
-            const usetree = response.data
-            this.setState({ usetree });
+            const useGarden = response.data
+            this.setState({ useGarden });
         });
     }
 
-
-
-
-    
-
-    deleteUsetree(treesId) {
+    deleteUseGarden(treesId) {
         console.log("Delete after Entering")
         axios.delete(`api/trees/delete/${treesId}`)
             .then(res => {
-                const usetree = this.state.useType.filter(item => item.treesId !== treesId);
-                this.setState({ usetree });
+                const useGarden = this.state.useGarden.filter(item => item.treesId !== treesId);
+                this.setState({ useGarden });
             })
     }
 
 
 
-
-
-
-    // componentDidMount() {
-    //     axios.get("api/Treetype").then(response => {
-    //         const useType = response.data
-    //         this.setState({ useType });
-    //     });
-    // }
-
-    // deleteUseType(treetypeId) {
-    //     console.log("Delete after Entering")
-    //     axios.delete(`api/users/delete/${treetypeId}`)
-    //         .then(res => {
-    //             const useType = this.state.useType.filter(item => item.treetypeId !== treetypeId);
-    //             this.setState({ useType });
-    //         })
-    // }
-
-
-
     
-
-    // deleteUseType(id) {
-    //     console.log("Delete after Entering")
-    //     axios.delete(`api/Treetype/delete/${id}`)
-    //         .then(res => {
-    //             const useType = this.state.useType.filter(item => item.id !== id);
-    //             this.setState({ useType });
-    //         })
-    // }
 
 
 
@@ -87,31 +54,32 @@ render() {
         <div className="Home" >
             <div className="Home2">
                <p></p>
-                    {this.state.useType.map((item => (
-                        <tr key={item.treetypeId}>
+                    {this.state.useGarden.map((item => (
+                        <tr key={item.treesId}>
 
 
                        <div class="card">
                         <div class="card-header"></div>
                          <div class="card-img-container">
                            <div class="card-image">
-                      <img height="200" width="200" src={item.image} />
+                      <img height="200" width="200" src={item.treetype.image} />
                          </div>
                         </div>
                       <div class="card-name">
-                       <p>location :{item.location} </p>
                       </div>
                         <div class="card-info">
-                        <p>name :{item.named} </p>
+                        <p>location :{item.location} </p>
                         <p> Time : {item.plantingtime}</p>
-                        <p>type :{item.type} </p>
+                        <p>named :{item.treetype.named} </p>
+                        <p>type :{item.treetype.type} </p>
+                        {/* <p>{item.treetype.type}</p> */}
                         </div>
                        <div class="card-social">
 
 </div>
 </div>
 
-                 <td><button button class="bubbly" onClick={(e) => this.deleteUsetree(item.id, e)}>delete</button></td>
+                 <td><button button class="bubbly" onClick={(e) => this.deleteUseGarden(item.treesId, e)}>delete</button></td>
 
                         </tr>
                     )))

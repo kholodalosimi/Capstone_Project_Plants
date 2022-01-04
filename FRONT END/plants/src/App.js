@@ -17,8 +17,10 @@ export default function App() {
     <div >
        <img src={Logo} alt="logo" className="logo" />
       <nav >
-             <Link to="/home">< button class="bubbly"> Home </button>  </Link> 
+          <Link to="/home">< button class="bubbly"> Home </button>  </Link>           
+          <Link to="/Login"><button class="bubbly"> Login </button>  </Link> 
           <Link to="/joinus"><button class="bubbly"> JoinUs </button>  </Link> 
+
           <Link to="/plantfriends"><button class="bubbly"> Plant Friends </button> </Link> 
           <Link to="/UserProfile"><button class="bubbly"> User Profile </button> </Link>
 

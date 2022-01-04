@@ -48,4 +48,16 @@ public class UsersController <usersService> {
 
 
     }
+
+
+    //    login
+
+
+    @GetMapping(path = "login")
+    public String checkLogin(@RequestParam (name = "username") String username , @RequestParam (name = "password")
+            String password ) {
+        return usersService.getCheck(username,password);
+
+    }
+
 }

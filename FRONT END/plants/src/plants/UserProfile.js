@@ -43,9 +43,9 @@ export default class UserProfile extends Component {
 
 
 
-
     render() {
         return (
+
 
 
             <div className="Home" >
@@ -67,10 +67,11 @@ export default class UserProfile extends Component {
                             <p>id :{item.id} </p>
                             </div>
                            <div class="card-social">
-
-  </div>
-</div>
-
+                           <Link to="/AddPlant"><button class="bubbly1"> add Plant </button> </Link>
+                           <Link to="/MyGarden"><button class="bubbly1"> My Garden </button> </Link>
+                           <Outlet />
+                            </div>
+                            </div>
 
 
                                 <td><button button class="bubbly" onClick={(e) => this.deleteUseTrees(item.id, e)}>delete</button></td>
@@ -78,17 +79,13 @@ export default class UserProfile extends Component {
                         )))
                         }
             
-            
                <div>
-
-         
-                <Link to="/AddPlant"><button class="bubbly"> add plant </button> </Link>
-                <Link to="/MyGarden"><button class="bubbly"> my garden </button> </Link>
-                <Outlet />
+                {/* <Link to="/AddPlant"><button class="bubbly"> add Plant </button> </Link>
+                <Link to="/MyGarden"><button class="bubbly"> my Plants </button> </Link>
+                <Outlet /> */}
                 </div>
             </div>
-            </div>
-           
+            </div>  
       )
     }
   }
