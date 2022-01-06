@@ -215,9 +215,10 @@ function handleSubmit(){
 
 
   return (
+    
     <main className="input1" >
 
-     
+      
     <div>
  
 
@@ -243,7 +244,7 @@ function handleSubmit(){
           <input type="text" name="username"placeholder="" onChange={handleUserame} size="10" /><br/>
 
           <label> password :  </label> 
-          <input type="password" name="password"placeholder="" onChange={handlePassword} size="10" /><br/> <hr />
+          <input type="password" name="password"placeholder="" onChange={handlePassword} size="10" /><br/>
 
 
           {/* <label>  treesId:  </label>
@@ -252,7 +253,7 @@ function handleSubmit(){
           {/* <input type="text" id="id" name="id" onChange={handleClickDel} /><br />
          <input type="submit" value="Delete" onClick={handleClickDel2}></input> <br /> */}
 
-          <button onClick={handleSubmit} > submit1  </button> <br/> <hr />
+          <button onClick={handleSubmit} class="bubbly" > submit1  </button> <br/>
           {/* <button type ="submit" onClick={()=>setDisplayBorder(!displayBorder)} >2+3{ displayBorder } </button> <br/> <hr /> */}
 
 
@@ -300,8 +301,10 @@ function handleSubmit(){
          <button onClick={handleSubmit3} > submit3  </button> <br/> <hr /> */}
 
       </div>
-   </div>
+   </div> 
+ 
     </main>
+  
 
    
   );

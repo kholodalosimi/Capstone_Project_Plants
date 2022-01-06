@@ -47,8 +47,9 @@ export default class UserProfile extends Component {
         return (
 
 
-
+ 
             <div className="Home" >
+               
                 <div className="Home2">
                         {this.state.useTrees.map((item => (
                             <tr key={item.id}>
@@ -74,7 +75,7 @@ export default class UserProfile extends Component {
                             </div>
 
 
-                                <td><button button class="bubbly" onClick={(e) => this.deleteUseTrees(item.id, e)}>delete</button></td>
+                                <button button class="bubbly" onClick={(e) => this.deleteUseTrees(item.id, e)}>delete</button>
                             </tr>
                         )))
                         }
@@ -85,7 +86,9 @@ export default class UserProfile extends Component {
                 <Outlet /> */}
                 </div>
             </div>
-            </div>  
+            
+            </div> 
+            
       )
     }
   }

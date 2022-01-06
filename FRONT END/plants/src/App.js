@@ -2,13 +2,26 @@ import React, { useEffect, useState } from 'react'
 import { Link, Outlet } from "react-router-dom";
 import './App.css';
 import Logo from "./plants/image/Logo.png";
-
+import Login from './plants/Login';
 
 
 
 
 
 export default function App() {
+
+
+
+// Login
+
+  let [Authentication,setAuthentication]= useState(false);
+    function handleLogin(){
+        setAuthentication(true);
+    }
+    if(!Authentication){
+        return<Login handleLogin = {handleLogin} />
+    }
+
 
 
 

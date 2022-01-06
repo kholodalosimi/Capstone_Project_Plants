@@ -2,47 +2,86 @@ import React,{useState,useContext} from 'react'
 import { Route, Redirect } from 'react-router'
 // import { Form, Button } from 'react-bootstrap'
 import axios from "axios"
-// import './App.css'
+// import './App.css
+
+
+
+
+export default function Login(props) {
+
+
+    let [username, setUsername] = useState("")
+    let [password, setPassword] = useState("")
+
+
+
+    //  const authContext = useContext(AuthContext) 
+    // function login(e) {
+    //     let employee = {
+    //         username: username,
+    //         password: password,
+    //     }
+
+
+        
+    //     e.preventDefault();
+    //     console.log({ username, password });
+    //     //Send Api request to validate data and get token
+    //     axios({
+    //         method: 'get',
+    //         url: 'api/users/login',
+    //         params:{username:username, password:password}
+    //     }).then((res)=> alert(res.data));
+    // }
+
+
+
+
+    function handleUserame(event) {setUsername((username = event.target.value));}
+    function handlePassword(event) {setPassword((password = event.target.value));}
 
 
 
 
 
-
-export default function Login() {
-    const [username, setUsername] = useState('')
-    const [password, setPassword] = useState('')
-   /*  const authContext = useContext(AuthContext) */
-    function login(e) {
-        let employee = {
-            username: username,
-            password: password,
+function handleSubmit(event) {
+    event.preventDefault();
+    axios({
+      method: "get",
+      url: "api/users/login",
+      params: { username: username, password: password }
+    })
+      .then((res => {
+        console.log(res.data)
+        if (res.data == "welcome you Authentication") {
+          props.handleLogin();
         }
-        e.preventDefault();
-        console.log({ username, password });
-        //Send Api request to validate data and get token
-        axios({
-            method: 'post',
-            url: 'login',
-            data: employee
-        }).then((response)=> alert(response.data));
-    }
+        else {
+          alert(res.data)
+        }
+      }))
+
+    }  
+
+
+ 
     return (
         <main  class="bubbly3">
         <h2>Login</h2>
           <form >
-        <hr />
+      
        <div>
                 <label> username </label>
-                <input type="username" id="#{label}" required="required" onChange={ e=>setUsername(e.target.value)}/>
-                <hr />
+                <input type="username" id="#{label}" required="required" onChange={ handleUserame}/>
+                
                 <label> password</label>
-                <input type="password" id="#{label}" required="required" onChange={e => setPassword(e.target.value)}/>
-                <hr />
+                <input type="password" id="#{label}" required="required" onChange={handlePassword}/>
+                <hr></hr>
                 <div class="button-container">
-                            <button onClick={login} class="bubbly" ><span>Login</span></button>
-                        </div>
-                        {/* <div class="footer"><a href="#">Forgot your password</a></div> */}
+                 <button  type="submit" onClick={handleSubmit} class="bubbly" ><span>Login</span></button>
+                       
+                 </div>
+                <div class="bubbly"><a >Forgot your password</a></div>
              </div>
              </form>
       </main>

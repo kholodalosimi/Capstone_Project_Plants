@@ -114,7 +114,6 @@ function handleSubmit1(){
 
 
     
-  
 
 // table 3 add
 
@@ -157,13 +156,13 @@ function handleSubmit1(){
 
         
         <label> treetypeId :  </label> 
-          <input type="text" name="treetypeId"placeholder="" onChange={handleTreetypeId} size="10" /><br/> <hr />
+          <input type="text" name="treetypeId"placeholder="" onChange={handleTreetypeId} size="10" /><br/> 
 
           <label> named :  </label> 
-          <input type="text" name="named"placeholder="" onChange={handleNamed} size="10" /><br/> <hr />
+          <input type="text" name="named"placeholder="" onChange={handleNamed} size="10" /><br/> 
 
           <label> type :  </label> 
-          <input type="text" name="type"placeholder="" onChange={handleType} size="10" /><br/> <hr />
+          <input type="text" name="type"placeholder="" onChange={handleType} size="10" /><br/> 
 
                     <label> number Of Plants : </label> 
           <input name="numberOfPlants"placeholder="" onChange={handleNumberOfPlants} size="10" /><br/> 
@@ -171,10 +170,9 @@ function handleSubmit1(){
          <label> image : </label> 
          <input  name="picture" placeholder="" onChange={handleImage} size="10" /><br/> 
 
-         <button onClick={handleSubmit3} > submit3  </button> <br/> <hr />
+         <button onClick={handleSubmit3} class="bubbly" > submit3  </button> <br/> 
 
-<br></br>
-<br></br>
+
         {/* 2 */}
         <label> Location </label>
           <input type="text" name="name" placeholder="" onChange={handleLocation} /><br/> 
@@ -186,7 +184,7 @@ function handleSubmit1(){
 
           
  
-          <button onClick={handleSubmit1} > submit2  </button> <br/> 
+          <button onClick={handleSubmit1} class="bubbly" > submit2  </button> <br/> 
 
           </div>
       </div>

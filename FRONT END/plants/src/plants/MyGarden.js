@@ -79,8 +79,7 @@ render() {
 </div>
 </div>
 
-                 <td><button button class="bubbly" onClick={(e) => this.deleteUseGarden(item.treesId, e)}>delete</button></td>
-
+                 <button button class="bubbly" onClick={(e) => this.deleteUseGarden(item.treesId, e)}>delete</button>
                         </tr>
                     )))
                     }
