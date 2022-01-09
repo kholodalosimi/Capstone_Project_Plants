@@ -11,7 +11,6 @@ export default function AddPlant() {
 
 
 
-
 // Table 2
   let [location, setLocation] = useState("")
   let [plantingtime, setPlantingtime] = useState("")
@@ -57,8 +56,7 @@ let NueUsers = {
   
 }
 
-         // Table 3
-
+ // Table 3
 
 let  NueTreetype = {
   treetypeId : treetypeId,

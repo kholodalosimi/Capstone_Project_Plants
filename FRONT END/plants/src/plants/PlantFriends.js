@@ -1,14 +1,12 @@
 
-// import React from 'react';
 import React, { Component } from "react";
 import axios from 'axios';
 import { Link , Outlet} from "react-router-dom";
 
-// import axios, { Axios } from "axios"
-
 
 
 export default class PlantFriends extends Component {
+
 
  
     constructor(props) {
@@ -22,7 +20,7 @@ export default class PlantFriends extends Component {
     }
 
 
-    
+
     componentDidMount() {
         axios.get("api/trees").then(response => {
             const useFriends = response.data
@@ -32,17 +30,19 @@ export default class PlantFriends extends Component {
     }
 
 
+
+
     render() {
         return (
     
-        
 
             <div className="Home" > 
-                <div className="Home2">
-                   <p></p>
-
-                   <Link to="/JoinUs"><button class="bubbly4"> Join Us </button> </Link>
+             <Link to="/JoinUs"><button class="bubbly4"> Join Us </button> </Link>
                 <Outlet />
+              <p></p>
+              
+                <div className="Home2" >
+             
                       {this.state.useFriends.map((item => (
                             <tr key={item.treesId}>
 
@@ -61,7 +61,6 @@ export default class PlantFriends extends Component {
                              <p>location :{item.location} </p>
                              <p> Time : {item.plantingtime}</p>
                              <p>type :{item.treetype.type} </p>
-                            {/* <p>{item.treetype.type}</p> */}
                             </div>
                             
                            <div class="card-social">

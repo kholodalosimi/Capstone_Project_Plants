@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { Link, Outlet } from "react-router-dom";
 import './App.css';
 import Logo from "./plants/image/Logo.png";
+import Logo2 from "./plants/image/Logo2.png";
 import Login from './plants/Login';
-
 
 
 
@@ -14,13 +14,13 @@ export default function App() {
 
 // Login
 
-  let [Authentication,setAuthentication]= useState(false);
-    function handleLogin(){
-        setAuthentication(true);
-    }
-    if(!Authentication){
-        return<Login handleLogin = {handleLogin} />
-    }
+  // let [Authentication,setAuthentication]= useState(false);
+  //   function handleLogin(){
+  //       setAuthentication(true);
+  //   }
+  //   if(!Authentication){
+  //       return<Login handleLogin = {handleLogin} />
+  //   }
 
 
 
@@ -38,24 +38,16 @@ export default function App() {
           <Link to="/UserProfile"><button class="bubbly"> User Profile </button> </Link>
 
 
-          <Link  className="Home" to="/TreesKsa"><button class="bubbly1" > trees in saudi arabia</button>  </Link> 
-          <Link className="Home"  to="/TheFlowers"><button class="bubbly1"> The Flowers</button> </Link> 
-          <Link className="Home" to="/world"><button class="bubbly1"> The strangest trees in the world</button>  </Link>      
+          {/* <Link  className="Home" to="/TreesKsa"><button class="bubbly" > trees in saudi arabia</button>  </Link> 
+          <Link className="Home"  to="/TheFlowers"><button class="bubbly"> The Flowers</button> </Link> 
+          <Link className="Home" to="/world"><button class="bubbly1"> The strangest trees in the world</button>  </Link>       */}
               
       </nav>
       <Outlet />
 
-      
 
-    <div>  
-<h3>(Afforestation in Saudi Arabia)</h3>
-<h5>the Volunteer work is intended for people who wish to contribute to the community and at
-the same time to Learn about the types of plants in Saudi Arabia and the right place to grow them.
-This volunteer work is suitable for all segments of society and for those who wish to plant trees.
-For example, Planting trees and flowers in schools, public parks, or even in the desert All you have to do is Register with us to become a friend of plants .
-</h5>
-      </div> 
-
+<dr></dr>
+      <img src={Logo2} alt="logo2" className="logo2" />
 
     </div>
   )

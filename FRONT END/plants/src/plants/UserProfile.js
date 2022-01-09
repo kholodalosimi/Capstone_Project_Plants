@@ -9,6 +9,8 @@ import { Link , Outlet} from "react-router-dom";
 export default class UserProfile extends Component {
 
 
+
+    
     constructor(props) {
         super(props);
 
@@ -20,7 +22,6 @@ export default class UserProfile extends Component {
     }
 
 
-
     componentDidMount() {
         axios.get("api/users").then(response => {
             const useTrees = response.data
@@ -29,8 +30,6 @@ export default class UserProfile extends Component {
     }
 
 
-  
-    
 
     deleteUseTrees(id) {
         console.log("Delete after Entering")
@@ -70,20 +69,19 @@ export default class UserProfile extends Component {
                            <div class="card-social">
                            <Link to="/AddPlant"><button class="bubbly1"> add Plant </button> </Link>
                            <Link to="/MyGarden"><button class="bubbly1"> My Garden </button> </Link>
+                           <button  class="bubbly" onClick={(e) => this.deleteUseTrees(item.id, e)}>delete</button>
                            <Outlet />
                             </div>
                             </div>
 
 
-                                <button button class="bubbly" onClick={(e) => this.deleteUseTrees(item.id, e)}>delete</button>
+                             
                             </tr>
                         )))
                         }
             
                <div>
-                {/* <Link to="/AddPlant"><button class="bubbly"> add Plant </button> </Link>
-                <Link to="/MyGarden"><button class="bubbly"> my Plants </button> </Link>
-                <Outlet /> */}
+               
                 </div>
             </div>
             

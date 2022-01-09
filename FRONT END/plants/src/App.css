@@ -2,9 +2,9 @@
 
  body {
  
-  background-color: #accab0;
-  background:#e1efbb url('/src/plants/image/11.png');
-  color: rgb(255, 255, 255);
+  background-color: #728569;
+  background:#728569 url('/src/plants/image/11.png');
+  color: #ffffff;
   padding: 40px;
   font-family: Arial;
   text-align: center;
@@ -13,48 +13,49 @@
 
 
 .logo{
-  width: 400px;
+  width: 350px;
 
 }
 
 
+.logo2{
+  width: 650px;
+  position: relative;
+  display: table-caption;
+  float: left;
+
+  
+}
 .Home {
-  display: flex;
-  padding-left: 0;
-  align-items: stretch;
-  flex-grow: 1;
-  background-color:#b2df9580;
+  box-sizing: border-box;
+  font-size: 100%; 
+  overflow-y: scroll;
+  background: var(--greyLight-1);
+  
+  @media screen and (min-width: 900px) {
+        font-size: 100%; }
 
 }
 
 .Home2{
   
-  
+  min-height: 75%;;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  background: var(--greyLight-1);
    color: #000000;
     text-align: center;
 
   }
 
-.Home-nav {
-  
-  border-right: thick double #223117;
-  flex-basis: 20rem;
-  /* background-color: #20a45ee3 ; */
-  z-index: 1;
-}
 
-/* .Home-nav {
-  border-right:
-} */
-
-.Home-heading {
-  border-right-style :dotted
-}
 
 
 .input1 {
   width: 400px;
-  background: #98be8294;
+  background: #49763f93;
   padding: 3% ;
   margin: 1em auto;
   border-top: 5px solid #000000;
@@ -90,8 +91,6 @@ input {
    margin-bottom: 13px;
    border-radius: 40px;
    
-   
-   
   color: #3b5a35;
   border: 1px solid #7a915b;
   padding: 10px 60px;
@@ -105,8 +104,29 @@ input {
  
 }
 
+h3{
+  font-family: serif;
+  color: #ffffff;
+  font-size: 20px;
+  text-align: center;
+  text-shadow: 1px 1px rgba(0, 0, 0, .1);
+  color: #ffffff;
+  margin-top: 57px;
+  font-weight: 7;
+  font-size: 30px;
+
+}
 
 
+h5{
+  font-family:serif;
+  color: #ffffff ;
+  font-size: 19px;
+  font-style: italic;
+  font-weight: 7;
+  
+
+}
 
 .bubbly1{
   display: inline-block;
@@ -116,7 +136,7 @@ input {
    margin-bottom: 5px;
    -webkit-appearance: none;
     appearance: solid;
-     background-color:#7a915b9c;
+     background-color:#a5b1959c;
     border-radius: 20% 20%;
    border: none;
    cursor: pointer;
@@ -134,12 +154,12 @@ input {
 .bubbly3 {
   display: inline-block;
     font-size: 20px;
-    padding: 123px;
+    padding: 223px;
     margin-top: 022px;
    margin-bottom: 13px;
    -webkit-appearance: none;
     appearance: solid;
-     background-color:#70b44975;
+     background-color:#61856163;
     border-radius: 12px;
    border: none;
    cursor: pointer;
@@ -151,39 +171,64 @@ input {
 
 /* UserProfile */
 
-
 .bubbly4 { 
  
   font-family: "Gill Sans", sans-serif;  display: inline-block;
-    font-size: 12px;
+    font-size: 14px;
     padding: 2em 5em;
     margin-top: 0px;
    margin-bottom: 13px;
-     background-color:#70b44975;
+     background-color:#61856163;
     border-radius: 40px;
    border: none;
- 
+   display: inline-block;
    position: relative;
-    box-shadow: 0 2px 25px #000000b7;
+
 
 }
 
 
-.card{
-/*   display: inline-block; */
-  background: #06280439;
-  width: 300px;
-  margin: 0 auto;
+.bubbly6 {
+
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  display: inline-block;
+  font-size: 20px;
+  padding: 1em 4em;
+  margin-top: 100;
+  margin-bottom: 10px;
+  border-radius: 40px;
+  
+  color: #3b5a35;
+  border: 1px solid #2c3b19;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+
+
+
+}
+
+.card{ 
+   margin: 0 auto;
+   float: left;
+  background: #49763f36;
+  width: 500px;
+  border: 2px solid #749674;
+
+
+
 
 }
 
 .card-header{
-  background: #ffffff;
-  height: 13px;
+  background: #49763f;
+  height: 3px;
+  
 }
 
 .card-img-container{
-  margin-top: 23px;
+  margin-top: 39px;
+
 }
 .card-image{
   height: 75%;
@@ -197,15 +242,14 @@ input {
 }
 .card-name{
   margin: 30px auto;
-  /* font-family: 'Parisienne', cursive; */
-  font-size: 24px;
+  font-size: 30px;
 }
 .card-info{
-  line-height: 1.5;
+  line-height:  32px;
 }
 .card-social{
   text-align: center;
-  background: #C8E6C9;
+  background: #ffffff;
   margin-top: 60px;
 }
 .card-social .fa{
@@ -213,4 +257,141 @@ input {
   font-size: 20px;
   color: rgb(0, 0, 0);
 }
+
+
+
+
+/* add link  HOME */
+
+.gallery {
+  
+  font-family:serif;
+  color: #ffffff ;
+  font-size: 19px;
+  font-style: italic;
+  font-weight: 7;
+  margin: 2%;
+  border: 1px solid #749674;
+  float: left;
+  width: 180px;
+  position: relative;
+  align-items: flex-end;
+  overflow: hidden;
+  padding: 1rem;
+  width: 10%;
+  text-align: center;
+  color: whitesmoke;
+min-width: 230px;
+ height: 350px;
+ background-image: url("/src/plants/image/A1.png");
+
+
+}
+
+.gallery1 {
+  
+  font-family:serif;
+  color: #ffffff ;
+  font-size: 19px;
+  font-style: italic;
+  font-weight: 7;
+  margin: 2%;
+  border: 1px solid #749674;
+  float: left;
+  width: 180px;
+  position: relative;
+  align-items: flex-end;
+  overflow: hidden;
+  padding: 1rem;
+  width: 10%;
+  text-align: center;
+  color: whitesmoke;
+  min-width: 230px;
+   height: 350px;
+   background-image: url("/src/plants/image/A2.png");
+
+
+
+}
+
+
+.gallery2 {
+  
+  font-family:serif;
+  color: #ffffff ;
+  font-size: 19px;
+  font-style: italic;
+  font-weight: 7;
+  margin: 2%;
+  border: 1px solid #749674;
+  float: left;
+  width: 180px;
+  position: relative;
+  align-items: flex-end;
+  overflow: hidden;
+  padding: 1rem;
+  width: 10%;
+  text-align: center;
+  color: whitesmoke;
+  min-width: 230px;
+   height: 350px;
+   background-image: url("/src/plants/image/A3.png");
+
+
+
+}
+
+.gallery3 {
+  
+  font-family:serif;
+  color: #ffffff ;
+  font-size: 19px;
+  font-style: italic;
+  font-weight: 7;
+  margin: 2%;
+  border: 1px solid #749674;
+  float: left;
+  width: 180px;
+  position: relative;
+  align-items: flex-end;
+  overflow: hidden;
+  padding: 1rem;
+  width: 10%;
+  text-align: center;
+  color: whitesmoke;
+  min-width: 230px;
+   height: 350px;
+   background-image: url("/src/plants/image/A4.png");
+
+
+
+}
+
+
+
+.gallery:hover { 
+  border: 1px solid #000000;
+}
+
+
+.desc {
+  padding: -10px -10px 10px 10px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 23px;
+
+
+}
+
+
+
+/* Afforestation */
+.Home6{
+  background: url('/src/plants/image/2.png') no-repeat center center fixed;
+  background-size: cover;
+  border-radius: 20px;
+  height: 200px;
+}
+
 

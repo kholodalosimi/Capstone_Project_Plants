@@ -66,7 +66,8 @@ function handleSubmit(event) {
 
  
     return (
-        <main  class="bubbly3">
+    
+        <div  class="bubbly3">
         <h2>Login</h2>
           <form >
       
@@ -84,6 +85,7 @@ function handleSubmit(event) {
                 <div class="bubbly"><a >Forgot your password</a></div>
              </div>
              </form>
-      </main>
+    
+      </div>
     )
 }
