@@ -23,7 +23,7 @@ For example, Planting trees and flowers in schools, public parks, or even in the
 
 <div >
 
-{/* 
+
   <div class="gallery">
   <div class="desc"> 50,000 trees planted as Saudi Arabia launches afforestation campaign</div>
   <form  action="https://www.saudigazette.com.sa/article/580845">
@@ -63,7 +63,7 @@ For example, Planting trees and flowers in schools, public parks, or even in the
     <button class="bubbly6" type="submit">open</button>
 </form>
 
-</div> */}
+</div>
 
 </div>
    </div>

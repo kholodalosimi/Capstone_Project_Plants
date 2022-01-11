@@ -59,7 +59,6 @@ export default class PlantFriends extends Component {
                             <h3>name :{item.users.name}</h3>
                              <p>named :{item.treetype.named} </p>
                              <p>location :{item.location} </p>
-                             <p> Time : {item.plantingtime}</p>
                              <p>type :{item.treetype.type} </p>
                             </div>
                             

@@ -9,6 +9,8 @@ export default function AddPlant() {
 
 
 
+  //Table 1
+  let [id, setId] = useState("")
 
 
 // Table 2
@@ -27,6 +29,10 @@ export default function AddPlant() {
 
 
 
+
+
+  // Table 1
+  function handleId(event) {setId((id = event.target.value));}
 
 
   // Table 2
@@ -53,7 +59,7 @@ export default function AddPlant() {
 
 let NueUsers = { 
 
-  
+  id: id
 }
 
  // Table 3
@@ -62,7 +68,7 @@ let  NueTreetype = {
   treetypeId : treetypeId,
   named : named,
   type : type,
-  //  numberOfPlants:numberOfPlants,
+   numberOfPlants:numberOfPlants,
   image : image
 }
 
@@ -75,7 +81,7 @@ let  NueTreetype = {
  {treesId: treesId,
   location : location,
    plantingtime : plantingtime,
-  //  users : NueUsers,
+   users : NueUsers,
    treetype : NueTreetype
   
   }
@@ -180,8 +186,11 @@ function handleSubmit1(){
           <label>  treesId:  </label>
           <input type="text" name="firsid" placeholder="" onChange={handleTreesId} /><br/> 
 
-          
- 
+          {/* <label> treetypeId :  </label> 
+          <input type="text" name="treetypeId"placeholder="" onChange={handleTreetypeId} size="10" /><br/> 
+          <label>  id:  </label>
+          <input type="text" name="id" placeholder="" onChange={handleId} /><br/> */}
+    
           <button onClick={handleSubmit1} class="bubbly" > submit2  </button> <br/> 
 
           </div>

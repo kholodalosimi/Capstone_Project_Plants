@@ -229,22 +229,22 @@ function handleSubmit(){
           <input type="text" name="id" placeholder="" onChange={handleId} /><br/>
 
           <label> NAME : </label>
-          <input type="text" name="name" placeholder="" onChange={handleName} /><br/> 
+          <input type="text" name="name" onChange={handleName} /><br/> 
 
           <label> phone : </label> 
-          <input type="text" name="phone" placeholder="" onChange={handlePhone} /><br/>
+          <input type="text" name="phone"  onChange={handlePhone} /><br/>
 
           <label> email : </label> 
-          <input type="text" name="email"placeholder="" onChange={handleEmail} size="10" /><br/>
+          <input type="text" name="email" onChange={handleEmail} size="10" /><br/>
 
           <label> picture : </label> 
-          <input  name="picture" placeholder="" onChange={handlePicture} size="10" /><br/> 
+          <input  name="picture" type="file" onChange={handlePicture} size="10" /><br/> 
 
           <label> usename : </label> 
-          <input type="text" name="username"placeholder="" onChange={handleUserame} size="10" /><br/>
+          <input type="text" name="username" onChange={handleUserame} size="10" /><br/>
 
           <label> password :  </label> 
-          <input type="password" name="password"placeholder="" onChange={handlePassword} size="10" /><br/>
+          <input type="password" name="password" onChange={handlePassword} size="10" /><br/>
 
 
           {/* <label>  treesId:  </label>
