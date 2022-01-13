@@ -225,14 +225,15 @@ function handleSubmit(){
     {/* Table 1 */}
 
 
+
           <label>  id:  </label>
-          <input type="text" name="id" placeholder="" onChange={handleId} /><br/>
+          <input type="" name="id" placeholder="" onChange={handleId} /><br/>
 
           <label> NAME : </label>
           <input type="text" name="name" onChange={handleName} /><br/> 
 
           <label> phone : </label> 
-          <input type="text" name="phone"  onChange={handlePhone} /><br/>
+          <input  name="phone"  onChange={handlePhone} /><br/>
 
           <label> email : </label> 
           <input type="text" name="email" onChange={handleEmail} size="10" /><br/>
@@ -247,11 +248,13 @@ function handleSubmit(){
           <input type="password" name="password" onChange={handlePassword} size="10" /><br/>
 
 
+
           {/* <label>  treesId:  </label>
           <input type="text" name="firsid" placeholder="" onChange={handleTreesId} /><br/> <hr /> */}
 
           {/* <input type="text" id="id" name="id" onChange={handleClickDel} /><br />
          <input type="submit" value="Delete" onClick={handleClickDel2}></input> <br /> */}
+
 
           <button onClick={handleSubmit} class="bubbly" > submit1  </button> <br/>
           {/* <button type ="submit" onClick={()=>setDisplayBorder(!displayBorder)} >2+3{ displayBorder } </button> <br/> <hr /> */}

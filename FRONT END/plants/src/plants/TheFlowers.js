@@ -1,17 +1,17 @@
 
-export default function TheFlowers() {
-    return (
-        <div className="Home">
+// export default function TheFlowers() {
+//     return (
+//         <div className="Home">
             
-            <h1 style={{}}>
+//             <h1 style={{}}>
                 
                 
-            TheFlowers
+//             TheFlowers
                 
                 
-                </h1>
+//                 </h1>
 
-        </div>
-    )
-}
+//         </div>
+//     )
+// }
 

@@ -13,6 +13,9 @@ export default function AddPlant() {
   let [id, setId] = useState("")
 
 
+
+
+
 // Table 2
   let [location, setLocation] = useState("")
   let [plantingtime, setPlantingtime] = useState("")
@@ -27,6 +30,7 @@ export default function AddPlant() {
   let [numberOfPlants, setNumberOfPlants] = useState("")
   let [image, setImage] = useState("")
 
+  let [displayBorder, setDisplayBorder] = useState(false)
 
 
 
@@ -54,7 +58,6 @@ export default function AddPlant() {
 
 
 
-
  // Table 1  
 
 let NueUsers = { 
@@ -73,7 +76,6 @@ let  NueTreetype = {
 }
 
 
-
  // Table 2 
 
 
@@ -90,7 +92,7 @@ let  NueTreetype = {
 
 
 
-    // Table 2 add 
+ // Table 2 add 
 
 
 
@@ -104,6 +106,8 @@ function handleSubmit1(){
           data: NueTrees,
           
       });
+
+
   
 
 // table 2 Del
@@ -117,7 +121,8 @@ function handleSubmit1(){
     // }
 
 
-    
+  
+
 
 // table 3 add
 
@@ -135,7 +140,7 @@ function handleSubmit1(){
   
   
   
-  
+
 
   // // table 3 Del
 
@@ -153,12 +158,10 @@ function handleSubmit1(){
   return (
     <main className="input1" >
      
-    <div  >
+    <div >
 
         <div >
-       
-
-        
+          <h3><i>Add Plant</i></h3>
         <label> treetypeId :  </label> 
           <input type="text" name="treetypeId"placeholder="" onChange={handleTreetypeId} size="10" /><br/> 
 
@@ -172,12 +175,20 @@ function handleSubmit1(){
           <input name="numberOfPlants"placeholder="" onChange={handleNumberOfPlants} size="10" /><br/> 
 
          <label> image : </label> 
-         <input  name="picture" placeholder="" onChange={handleImage} size="10" /><br/> 
+         <input type="file" name="picture" placeholder="" onChange={handleImage} size="10" /><br/> 
 
          <button onClick={handleSubmit3} class="bubbly" > submit3  </button> <br/> 
 
+         <button type ="submit" onClick={()=>setDisplayBorder(!displayBorder)}  class="bubbly" >other details { displayBorder ?"Hide":"Show"} </button>
+ </div>
+
+
 
         {/* 2 */}
+        
+        
+        {displayBorder &&
+       <div>
         <label> Location </label>
           <input type="text" name="name" placeholder="" onChange={handleLocation} /><br/> 
 
@@ -186,18 +197,21 @@ function handleSubmit1(){
           <label>  treesId:  </label>
           <input type="text" name="firsid" placeholder="" onChange={handleTreesId} /><br/> 
 
-          {/* <label> treetypeId :  </label> 
+          <label> treetypeId :  </label> 
           <input type="text" name="treetypeId"placeholder="" onChange={handleTreetypeId} size="10" /><br/> 
           <label>  id:  </label>
-          <input type="text" name="id" placeholder="" onChange={handleId} /><br/> */}
+          <input type="text" name="id" placeholder="" onChange={handleId} /><br/>
     
+
           <button onClick={handleSubmit1} class="bubbly" > submit2  </button> <br/> 
+        
 
-          </div>
-      </div>
-    
+          </div>}
+
+    </div>
+
     </main>
-
+  
    
   );
 

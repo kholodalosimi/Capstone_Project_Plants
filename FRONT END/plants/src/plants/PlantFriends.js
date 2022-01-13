@@ -36,7 +36,7 @@ export default class PlantFriends extends Component {
         return (
     
 
-            <div className="Home" > 
+            <div className="bubbly33" > 
              <Link to="/JoinUs"><button class="bubbly4"> Join Us </button> </Link>
                 <Outlet />
               <p></p>
@@ -45,7 +45,6 @@ export default class PlantFriends extends Component {
              
                       {this.state.useFriends.map((item => (
                             <tr key={item.treesId}>
-
                            <div class="card">
                             <div class="card-header"></div>
                              <div class="card-img-container">
@@ -80,8 +79,4 @@ export default class PlantFriends extends Component {
     }
     }
    
-  
-                       
-
-
 
