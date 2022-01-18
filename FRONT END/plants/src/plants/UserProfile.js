@@ -1,4 +1,3 @@
-
 import React, { Component } from "react";
 import axios from "axios"
 import { Link , Outlet} from "react-router-dom";
@@ -30,15 +29,16 @@ export default class UserProfile extends Component {
     }
 
 
+    
 
-    // deleteUseTrees(id) {
-    //     console.log("Delete after Entering")
-    //     axios.delete(`api/trees/delete/${id}`)
-    //         .then(res => {
-    //             const useTrees = this.state.useTrees.filter(item => item.id !== id);
-    //             this.setState({ useTrees });
-    //         })
-    // }
+    deleteUseTrees(id) {
+        console.log("Delete after Entering")
+        axios.delete(`api/users/delete/${id}`)
+            .then(res => {
+                const useTrees = this.state.useTrees.filter(item => item.id !== id);
+                this.setState({ useTrees });
+            })
+    }
 
 
 
@@ -70,7 +70,7 @@ export default class UserProfile extends Component {
                            <div class="card-social">
                            <Link to="/AddPlant"><button class="bubbly1"> add Plant </button> </Link>
                            <Link to="/MyGarden"><button class="bubbly1"> My Garden </button> </Link>
-                           {/* <button  class="bubbly" onClick={(e) => this.deleteUseTrees(item.id, e)}>delete</button> */}
+                           <button  class="bubbly" onClick={(e) => this.deleteUseTrees(item.id, e)}>delete</button>
                            <Outlet />
                             </div>
                            
@@ -93,3 +93,5 @@ export default class UserProfile extends Component {
       )
     }
   }
+
+

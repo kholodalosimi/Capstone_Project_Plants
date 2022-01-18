@@ -7,7 +7,7 @@ import T from "./plants/image/T.png";
 import Y from "./plants/image/Y.png";
 import N from "./plants/image/N.png";
 import Tl from "./plants/image/Tl.png";
-import F from "./plants/image/F.png";
+import G from "./plants/image/G.png";
 import Login from './plants/Login';
 
 
@@ -40,11 +40,25 @@ export default function App() {
        <img src={Logo} alt="logo" className="logo" />
 <div>
          {/* Social Media */}
-      <img src={T} alt="Social Media" className="Social_Media" />
-      <img src={F} alt="Social Media" className="Social_Media" />
+         <a href="https://twitter.com/">
+      <img src={T} alt="Social Media" className="Social_Media" /> 
+       </a>
+
+       <a href="https://web.telegram.org/">
       <img src={Tl} alt="Social Media" className="Social_Media" />
+      </a>
+
+      <a href="https://github.com/kholodalosimi">
+      <img src={G} alt="Social Media" className="Social_Media" />
+      </a>
+
+      <a href="https://www.instagram.com/">
       <img src={N} alt="Social Media" className="Social_Media" />
+      </a>
+
+      <a href="https://youtu.be/Dvfz58emgpA">
       <img src={Y} alt="Social Media" className="Social_Media" />
+      </a>
       </div>
       <nav >
 
@@ -55,7 +69,8 @@ export default function App() {
 
           <Link to="/plantfriends"><button class="bubbly"> Plant Friends </button> </Link> 
           <Link to="/UserProfile"><button class="bubbly"> User Profile </button> </Link>
-
+          
+          {/* <button class="bubbly" onClick={()=>{localStorage.setItem("Login","")}}>logout</button> */}
 
           {/* <Link  className="Home" to="/TreesKsa"><button class="bubbly" > trees in saudi arabia</button>  </Link> 
           <Link className="Home"  to="/TheFlowers"><button class="bubbly"> The Flowers</button> </Link> 

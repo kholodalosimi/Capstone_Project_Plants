@@ -12,6 +12,7 @@ import java.util.List;
 @Entity
 @Table
 public class Users {
+
     @Id
     private int id;
     private String name;

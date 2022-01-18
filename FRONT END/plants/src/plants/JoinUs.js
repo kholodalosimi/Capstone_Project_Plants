@@ -227,7 +227,7 @@ function handleSubmit(){
 
 
           <label>  id:  </label>
-          <input type="" name="id" placeholder="" onChange={handleId} /><br/>
+          <input type="" name="id" placeholder="" onChange={handleId}  /><br/>
 
           <label> NAME : </label>
           <input type="text" name="name" onChange={handleName} /><br/> 
@@ -239,7 +239,7 @@ function handleSubmit(){
           <input type="text" name="email" onChange={handleEmail} size="10" /><br/>
 
           <label> picture : </label> 
-          <input  name="picture" type="file" onChange={handlePicture} size="10" /><br/> 
+          <input  name="text" type="file" onChange={handlePicture} size="10" /><br/> 
 
           <label> usename : </label> 
           <input type="text" name="username" onChange={handleUserame} size="10" /><br/>
@@ -256,7 +256,7 @@ function handleSubmit(){
          <input type="submit" value="Delete" onClick={handleClickDel2}></input> <br /> */}
 
 
-          <button onClick={handleSubmit} class="bubbly" > submit1  </button> <br/>
+          <button onClick={handleSubmit} class="bubbly"   > submit1   </button> <br/>
           {/* <button type ="submit" onClick={()=>setDisplayBorder(!displayBorder)} >2+3{ displayBorder } </button> <br/> <hr /> */}
 
 

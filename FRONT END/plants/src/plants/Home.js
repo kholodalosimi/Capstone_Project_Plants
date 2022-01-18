@@ -1,16 +1,26 @@
 import React from 'react'
-// import { Image } from "react-router-dom";
 
 
 
 
 
 export default function Home (props){
+
+
+
+
+
+
+
+
+
     return (
 
 
 
 <div >
+
+
     
 <div class="Home6">  
 <h3>(Afforestation in Saudi Arabia)</h3>
@@ -21,15 +31,25 @@ For example, Planting trees and flowers in schools, public parks, or even in the
 </h5>
       </div> 
 
-<div >
 
+      
+   <br></br>
+   <br></br>
+   <br></br>
+      {/* <iframe width="660" height="415" 
+src="https://www.youtube.com/embed/Dvfz58emgpA" 
+title="YouTube video player" frameborder="0" 
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen>
+</iframe> */}
+
+{/* <div >
 
   <div class="gallery">
-  <div class="desc"> 50,000 trees planted as Saudi Arabia launches afforestation campaign</div>
+  <div class="desc"> 50,000 trees planted as Saudi Arabia launches afforestation campaign </div>
   <form  action="https://www.saudigazette.com.sa/article/580845">
     <button class="bubbly6" type="submit">open</button>
 </form>
-
 
 </div>
 
@@ -65,7 +85,7 @@ For example, Planting trees and flowers in schools, public parks, or even in the
 
 </div>
 
-</div>
+</div> */}
    </div>
       );
     }

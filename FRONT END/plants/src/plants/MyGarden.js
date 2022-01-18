@@ -20,7 +20,6 @@ export default class MyGarden extends Component {
     }
 
 
-
     componentDidMount() {
         axios.get("api/trees").then(response => {
             const useGarden = response.data
@@ -53,7 +52,6 @@ render() {
                     {this.state.useGarden.map((item => (
                         <p key={item.treesId}>
 
-
                        <div class="card">
                         <div class="card-header"></div>
                          <div class="card-img-container">
@@ -66,7 +64,7 @@ render() {
                         <div class="card-info">
                         <p>location :{item.location} </p>
                         <p> Time : {item.plantingtime}</p>
-                        <p>named :{item.treetype.named} </p>
+                        <p>Tree Name :{item.treetype.named} </p>
                         <p>type :{item.treetype.type} </p>
                         </div>
                        <div class="card-social">

@@ -26,13 +26,13 @@ public class UsersService {
 
             String pass = usersRepository.findByUsername(username);
             if (pass.equals(password)) {
-                return "welcome you Authentication";
+                return "\uD83C\uDF31 Hello my friend \uD83C\uDF31";
             } else {
-                return " wrong password";
+                return " wrong password ☹️ ";
             }
         }
 
-        return "sorry not  Authentication";
+        return "sorry not  Authentication \uD83D\uDC94 ";
     }
 
 

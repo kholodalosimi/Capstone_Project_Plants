@@ -31,7 +31,6 @@ public class Trees {
 
 
 
-
 //    3>>>2
     @ManyToOne
     @JoinColumn(name = "treetype_id" , referencedColumnName = "treetypeId")

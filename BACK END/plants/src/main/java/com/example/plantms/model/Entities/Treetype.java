@@ -14,6 +14,8 @@ public class Treetype {
 
 
 
+
+
     @Id
     @Column(name = "treetypeId")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,6 +24,7 @@ public class Treetype {
     private String type;
     private int numberOfPlants;
     private String image;
+
 
 
 

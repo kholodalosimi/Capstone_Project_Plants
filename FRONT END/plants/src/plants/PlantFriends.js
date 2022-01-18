@@ -72,6 +72,66 @@ export default class PlantFriends extends Component {
                         }
              
             </div>
+
+             {/* fake user 1 */}
+
+            <p></p>
+              
+              <div className="Home2" >
+           
+                    
+                          
+                         <div class="card">
+                           <div >
+                             <div class="card-image">
+                            <img height="200" width="200" src= "https://pbs.twimg.com/media/D6nwznxWkAArRHH.jpg" />
+                           </div>
+                          </div>
+                        <div class="card-name">
+                        </div>
+                          <div class="card-info">
+                          <h3>name :Khaled </h3>
+                           <p>Tree Name  : Jasmine </p>
+                           <p>location :aljouf  </p>
+                           <p>type : flowers </p>
+                          </div>
+                          
+                         <div class="card-social">
+                      </div>
+                      </div>
+          </div>
+           
+
+
+
+            {/* fake user 2 */}
+
+            <p></p>
+              
+              <div className="Home2" >
+           
+                    
+                          
+                         <div class="card">
+                         
+                           <div >
+                             <div class="card-image">
+                            <img height="200" width="200" src= "https://i0.wp.com/mshtly.com/wp-content/uploads/2019/10/6-7.jpg?fit=650%2C691&ssl=1" />
+                           </div>
+                          </div>
+                        <div class="card-name">
+                        </div>
+                          <div class="card-info">
+                          <h3>name :Sarah </h3>
+                           <p>Tree Name  : FIG </p>
+                           <p>location :Tabuk  </p>
+                           <p>type : Fruits </p>
+                          </div>
+                          
+                         <div class="card-social">
+                      </div>
+                      </div>
+          </div>
            
             </div>
            
