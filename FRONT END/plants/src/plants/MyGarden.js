@@ -21,7 +21,7 @@ export default class MyGarden extends Component {
 
 
     componentDidMount() {
-        axios.get("api/trees").then(response => {
+        axios.get("https://plant-friend-backend.herokuapp.com/api/trees").then(response => {
             const useGarden = response.data
             this.setState({ useGarden });
         });
@@ -29,7 +29,7 @@ export default class MyGarden extends Component {
 
     deleteUseGarden(treesId) {
         console.log("Delete after Entering")
-        axios.delete(`api/trees/delete/${treesId}`)
+        axios.delete(`https://plant-friend-backend.herokuapp.com/api/trees/delete/${treesId}`)
             .then(res => {
                 const useGarden = this.state.useGarden.filter(item => item.treesId !== treesId);
                 this.setState({ useGarden });
@@ -38,7 +38,7 @@ export default class MyGarden extends Component {
 
 
 
-    
+  
     
 
 render() {

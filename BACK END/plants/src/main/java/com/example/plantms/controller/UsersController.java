@@ -9,8 +9,14 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 
+
+@CrossOrigin(origins = "https://plant-friend-frontend.herokuapp.com/")
+
 @RestController
 @RequestMapping(path = "api/users")
+
+//heroku app
+//@CrossOrigin(origins = "https://myFrontEnd.herokuapp.com")
 public class UsersController <usersService> {
 
     private UsersService usersService;

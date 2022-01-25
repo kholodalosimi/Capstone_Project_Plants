@@ -7,10 +7,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from  "./plants/Home";
 import JoinUs from "./plants/JoinUs";
 import PlantFriends from "./plants/PlantFriends";
-// import Login from "./plants/Login";
-import TreesKsa from "./plants/TreesKsa";
-import TheFlowers from "./plants/TheFlowers";
-import World from "./plants/world";
 import UserProfile from "./plants/UserProfile";
 import AddPlant from "./plants/AddPlant";
 import MyGarden from "./plants/MyGarden";
@@ -42,15 +38,9 @@ ReactDOM.render(
          
           <Route path="UserProfile" element={<UserProfile />} />
       
-          <Route path="TreesKsa" element={<TreesKsa />} >
- 
-          </Route>
-          <Route path="TheFlowers" element={<TheFlowers />} >
-          </Route>
+         
 
-          <Route path="world" element={<World />} >
-       
-          </Route>
+          
 
           <Route path="AddPlant" element={<AddPlant />} >
      

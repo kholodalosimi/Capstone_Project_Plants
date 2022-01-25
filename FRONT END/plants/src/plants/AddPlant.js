@@ -8,10 +8,8 @@ export default function AddPlant() {
 
 
 
-
   //Table 1
   let [id, setId] = useState("")
-
 
 
 
@@ -34,7 +32,6 @@ export default function AddPlant() {
 
 
 
-
   // Table 1
   function handleId(event) {setId((id = event.target.value));}
 
@@ -52,7 +49,6 @@ export default function AddPlant() {
   function handleType(event) {setType((type = event.target.value));}
   function handleNumberOfPlants(event) {setNumberOfPlants((numberOfPlants = event.target.value));}
   function handleImage(event) {setImage((image = event.target.value));}
-
 
 
 
@@ -80,15 +76,14 @@ let  NueTreetype = {
  // Table 2 
 
 
- let NueTrees = 
- {treesId: treesId,
+ let NueTrees = {
+   treesId: treesId,
   location : location,
    plantingtime : plantingtime,
    users : NueUsers,
    treetype : NueTreetype
   
   }
-
 
 
 
@@ -103,26 +98,15 @@ function handleSubmit1(){
       console.log(NueTrees)
       axios({
           method: 'post',
-          url: 'api/trees/add',
+          url: 'https://plant-friend-backend.herokuapp.com/api/trees/add',
           data: NueTrees,
           
       });
 
 
-  
-
-// table 2 Del
-
-    // function handleClickDel1(){
-    //   axios({
-    //     method: 'delete' ,
-    //     url: "api/trees/delete/",
-
-    //   });
-    // }
 
 
-  
+
 
 
 // table 3 add
@@ -133,26 +117,13 @@ function handleSubmit1(){
           console.log(NueTreetype)
           axios({
               method: 'post',
-              url: 'api/Treetype/add',
+              url: 'https://plant-friend-backend.herokuapp.com/api/Treetype/add',
               data: NueTreetype,
           });
       
         }
   
-  
-  
 
-
-  // // table 3 Del
-
-
-  //     function handleClickDel2(){
-   
-  //       axios({
-  //         method:'delete',
-  //         url:`/api/Treetype/delete/${del}`,
-  
-  //       });}
 
 
 
@@ -176,7 +147,7 @@ function handleSubmit1(){
           <input name="numberOfPlants"placeholder="" onChange={handleNumberOfPlants} size="10" /><br/> 
 
          <label> image : </label> 
-         <input type="file" name="picture" placeholder="" onChange={handleImage} size="10" /><br/> 
+         <input type="picture" name="picture" placeholder="" onChange={handleImage} size="10" /><br/> 
 
          <button onClick={handleSubmit3} class="bubbly" > submit3  </button> <br/> 
 

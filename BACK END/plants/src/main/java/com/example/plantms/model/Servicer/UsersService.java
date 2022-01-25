@@ -32,7 +32,7 @@ public class UsersService {
             }
         }
 
-        return "sorry not  Authentication \uD83D\uDC94 ";
+        return "Username is not registered \uD83D\uDC94 ";
     }
 
 

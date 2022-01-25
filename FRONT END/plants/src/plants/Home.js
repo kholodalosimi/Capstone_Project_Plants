@@ -9,19 +9,9 @@ export default function Home (props){
 
 
 
-
-
-
-
-
-    return (
-
-
-
+ return (
 <div >
 
-
-    
 <div class="Home6">  
 <h3>(Afforestation in Saudi Arabia)</h3>
 <h5>the Volunteer work is intended for people who wish to contribute to the community and at
@@ -30,43 +20,32 @@ This volunteer work is suitable for all segments of society and for those who wi
 For example, Planting trees and flowers in schools, public parks, or even in the desert All you have to do is Register with us to become a friend of plants .
 </h5>
       </div> 
-
-
-      
+   
    <br></br>
    <br></br>
    <br></br>
-      {/* <iframe width="660" height="415" 
-src="https://www.youtube.com/embed/Dvfz58emgpA" 
-title="YouTube video player" frameborder="0" 
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-allowfullscreen>
-</iframe> */}
 
-{/* <div >
-
+<div >
   <div class="gallery">
   <div class="desc"> 50,000 trees planted as Saudi Arabia launches afforestation campaign </div>
   <form  action="https://www.saudigazette.com.sa/article/580845">
+  
     <button class="bubbly6" type="submit">open</button>
 </form>
-
 </div>
 
 
 
-<div class="gallery1">
+
+<div class="gallery">
   <div class="desc">Green Riyadh Project involves planting 7.5 million trees across the capital</div>
   <form  action="https://saudigazette.com.sa/article/561558">
     <button class="bubbly6" type="submit">open</button>
 </form>
-
 </div>
 
 
-
-
-<div class="gallery2">
+<div class="gallery">
   <div class="desc">Saudi Green Initiative: all you need to know about kingdom's net-zero plan</div>
   <form  action="https://www.thenationalnews.com/gulf/saudi-arabia/saudi-green-initiative-everything-you-need-to-know-about-plan-to-plant-50-billion-trees-1.1194931">
     <button class="bubbly6" type="submit">open</button>
@@ -76,16 +55,13 @@ allowfullscreen>
 
 
 
-<div class="gallery3">
-  
+<div class="gallery">
   <div class="desc">It is the responsibility of oil-producing countries like Saudi Arabia to lead the way in tackling the climate crisis</div>
   <form  action="https://www.independent.co.uk/climate-change/opinion/saudi-arabia-oil-climate-crisis-tree-planting-mbs-b1825183.html">
     <button class="bubbly6" type="submit">open</button>
 </form>
-
 </div>
-
-</div> */}
+</div>
    </div>
       );
     }

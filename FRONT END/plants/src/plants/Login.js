@@ -5,44 +5,19 @@ import axios from "axios"
 
 
 
-
-
-
 export default function Login() {
 
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
 
 
-  // function login(e) {
-
-  //     let user = { username: username,password: password,}
-  //     e.preventDefault();
-
-  //     console.log({ username, password });
-
-  //     //Send Api request to validate data and get token
-  //     axios({
-  //         method: 'get',
-  //         url: 'api/users/login',
-  //         data: user
-  //     }).then((response)=>{alert(response.data)
-
-  //         if(response.data == " Authenticated"){
-
-  //             localStorage.setItem('username', username);
-  //         }else{
-  //             localStorage.setItem('username', "");
-  //         }
-  //     });
-  // }
 
   function handleSubmitUser(event) {
     event.preventDefault();
     axios({
 
         method: "get",
-        url: "api/users/login",
+        url: "https://plant-friend-backend.herokuapp.com/api/users/login",
         params: { username: username, password: password }
 
     })
@@ -57,8 +32,6 @@ export default function Login() {
             }
         }))
   }
-
-
 
 
 
